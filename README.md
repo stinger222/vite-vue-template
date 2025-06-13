@@ -4,7 +4,7 @@
 - **Vue-side:** pinia, vueuse, vee-validate, zod
 - **Styling:** tailwind and it's utils like clsx etc, lucide-icons, shadcn/vue-related stuff
 - **Misc:** socket.io-client
-- **Dev:** Typescript, vite
+- **Dev:** typescript, vite
 
 ## Description:
 Simple go-to template I use im my projects.
