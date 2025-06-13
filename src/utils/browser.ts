@@ -1,11 +1,11 @@
 /**
- * @fileoverview Утилиты, связанные с работой в браузере и его api
+ * @fileoverview Browser-related utils
  */
 
 import { toast } from 'vue-sonner'
 
 export const copy = (id: string) => {
   navigator.clipboard.writeText(id).then(() => {
-    toast.success('Скопировано!')
+    toast.success('Coppied!')
   })
 }

@@ -127,7 +127,7 @@
   }
 
   img {
-    @apply max-w-[100%] max-h-[100%]
+    @apply max-w-[100%] max-h-[100%];
   }
 
   .vert-divider {

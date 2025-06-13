@@ -1,5 +1,5 @@
 /**
- * @fileoverview Утилиты, связанные с расчётом чего-либо.
+ * @fileoverview Math-related utils.
  */
 
 export const randInt = (min: number, max: number, step: number = 1): number => {
