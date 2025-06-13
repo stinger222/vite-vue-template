@@ -11,9 +11,11 @@ Simple go-to template I use im my projects.
 
 ## Development
 ```shell
+cd ~/project-name
+npx degit stinger222/vite-vue-template#main . 
 npm i
-npm run dev  # Port 3000
 
+npm run dev  # On port 3000
 npm run format  # Prettier formatting
 npm run type-check  # Fast check for compile errors throughout the whole project
 ```
