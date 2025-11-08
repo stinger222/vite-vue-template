@@ -1,0 +1,116 @@
+{
+  "cSpell.enabled": true,
+  
+  "folderTemplates.structures": [
+    {
+      "name": "Component",
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "<FTName | pascalcase>/<FTName | pascalcase>.vue",
+          "template": "vue-component"
+        },
+        {
+          "fileName": "<FTName | pascalcase>/index.ts",
+          "template": "reexport-component"
+        }
+      ]
+    },
+    // {
+    //   "name": "Page Section",
+    // },
+    {
+      "name": "Page Component",
+      "omitParentDirectory": true,
+      "customVariables": ["SectionName", "ComponentName"],
+      "structure": [
+        {
+          "fileName": "<FTName | kebabcase>/_layout_/index.ts",
+          "template": "reexport-from-layout"
+        },
+        {
+          "fileName": "<FTName | kebabcase>/_layout_/<SectionName | pascalcase>.vue",
+          "template": "layout-component"
+        },
+        {
+          "fileName": "<FTName | kebabcase>/<SectionName | pascalcase>Section/<ComponentName | pascalcase>.vue",
+          "template": "section-component"
+        },
+        {
+          "fileName": "<FTName | kebabcase>/<SectionName | pascalcase>Section/index.ts",
+          "template": "reexport-from-section"
+        },
+        {
+          "fileName": "<FTName | kebabcase>/index.ts",
+          "template": "reexport-from-page"
+        },
+        // {
+        //   "fileName": "<FTName | kebabcase>/index.ts",
+        //   "template": "???"
+        // },
+        // {
+        //   "fileName": "<FTName | kebabcase>/<FTName | pascalcase>.vue",
+        //   "template": "vue-component"
+        // },
+      ]
+    },
+
+  ],
+
+  "folderTemplates.fileTemplates": {
+    "reexport-component": [
+      "export { default as <FTName | pascalcase> } from \"./<FTName | pascalcase>.vue\"",
+    ],
+    "reexport-all-from-component": [
+      "export * from \"./<FTName | pascalcase>\"",
+    ],
+    "reexport-from-layout": [
+      "export { default as <SectionName | pascalcase> } from \"./<SectionName | pascalcase>.vue\"",
+    ],
+    "reexport-from-section": [
+      "export { default as <ComponentName | pascalcase> } from \"./<ComponentName | pascalcase>.vue\"",
+    ],
+    "reexport-from-page": [
+      "export * from \"./_layout_\"",
+      "",
+      "export * from \"./<SectionName | pascalcase>Section\"",
+    ],
+    "section-component": [
+      "<script setup lang=\"ts\">",
+      "</script>",
+      "",
+      "<template>",
+      "\t<div><ComponentName | pascalcase></div>",
+      "</template>",
+      "",
+      "<style scoped>",
+      "</style>",
+      ""
+    ],
+    "layout-component": [
+      "<script setup lang=\"ts\">",
+      "import { <ComponentName | pascalcase> } from \"@/components/pages/<FTName | kebabcase>\"",
+      "</script>",
+      "",
+      "<template>",
+      "\t<<ComponentName | pascalcase > />",
+      "</template>",
+      "",
+      "<style scoped>",
+      "</style>",
+      ""
+    ],
+    "vue-component": [
+      "<script setup lang=\"ts\">",
+      "</script>",
+      "",
+      "<template>",
+      "\t<div><FTName | pascalcase></div>",
+      "</template>",
+      "",
+      "<style scoped>",
+      "</style>",
+      ""
+    ],
+  },
+}
