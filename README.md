@@ -17,6 +17,6 @@ npx degit stinger222/vite-vue-template#main .
 npm i
 npm run dev  # On port 3000
 npm run format  # Prettier formatting
-npm run type-check  # Fast check for compile errors throughout the whole project
+npm run type-check  # Check for compile errors throughout the whole project
 ```
 

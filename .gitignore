@@ -36,3 +36,6 @@ dist-ssr
 
 # Playwright
 /test-results/
+
+# Playwright
+/playwright/.auth/

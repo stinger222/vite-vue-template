@@ -1,12 +1,13 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'node:path'
-import tailwindcss from '@tailwindcss/vite'
+
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), tailwindcss(), /* vueDevTools() */],
-  server: {
+  plugins: [vue(), tailwindcss()],
+   server: {
     port: 3000
   },
   resolve: {
@@ -16,7 +17,8 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    environment: 'happy-dom',
-    include: ['**/*.test.*'],
+    environment: "jsdom",
+    setupFiles: ['./tests/setup.ts'],
+    include: ['**/*.test.*']
   }
 })
